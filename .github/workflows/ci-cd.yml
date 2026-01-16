@@ -39,7 +39,7 @@ jobs:
 
       # Step 6: Archive JAR for later use
       - name: Archive JAR
-        uses: actions/upload-artifact@v3.2.2
+        uses: actions/upload-artifact@v4
         with:
           name: secureapp-jar
           path: target/*.jar
