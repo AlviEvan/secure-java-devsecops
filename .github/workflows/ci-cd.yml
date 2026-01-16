@@ -35,7 +35,7 @@ jobs:
 
       # Step 5: Run OWASP Dependency-Check
       - name: OWASP Dependency Check
-        run: mvn org.owasp:dependency-check-maven:check
+        run: mvn org.owasp:dependency-check-maven:check -DfailBuildOnCVSS=0
 
       # Step 6: Archive JAR for later use
       - name: Archive JAR
