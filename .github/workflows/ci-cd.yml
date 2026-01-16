@@ -33,9 +33,9 @@ jobs:
       - name: Run tests
         run: mvn test
 
-      # Step 5: Run OWASP Dependency-Check
+      # Step 5: Run OWASP Dependency-Check with NVD API Key
       - name: OWASP Dependency Check
-        run: mvn org.owasp:dependency-check-maven:check -DfailBuildOnCVSS=0
+        run: mvn org.owasp:dependency-check-maven:check -Dnvd.api.key=${{ secrets.NVD_API_KEY }} -DfailBuildOnCVSS=7
 
       # Step 6: Archive JAR for later use
       - name: Archive JAR
