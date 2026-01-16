@@ -37,9 +37,9 @@ jobs:
       - name: OWASP Dependency Check
         run: mvn org.owasp:dependency-check-maven:check
 
-      # Step 6: Archive JAR for later use (optional)
+      # Step 6: Archive JAR for later use
       - name: Archive JAR
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.2.2
         with:
           name: secureapp-jar
           path: target/*.jar
