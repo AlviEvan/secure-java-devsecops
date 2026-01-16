@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: secureapp
+server:
+  port: 9090
